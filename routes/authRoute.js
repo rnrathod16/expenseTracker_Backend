@@ -4,6 +4,9 @@ const route = express.Router();
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
+route.get("/", (req, res) => {
+    res.send("Backend Hosted");
+})
 route.post("/signup", async(req, res) => {
     const { username, password } = req.body;
 
